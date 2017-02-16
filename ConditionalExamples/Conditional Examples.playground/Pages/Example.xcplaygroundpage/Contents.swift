@@ -53,7 +53,7 @@ if complement > 360 {
 }
 
 // Get random width and height for the inner square (between 50 and 250)
-let dimension = random(from: 50, toButNotIncluding: 250)
+let dimension = random(from: 25, toButNotIncluding: 200)
 
 // Draw the inner square
 canvas.fillColor = Color(hue: complement, saturation: 80, brightness: 90, alpha: 100)
@@ -64,3 +64,4 @@ canvas.drawRectangle(centreX: 150, centreY: 150, width: dimension, height: dimen
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
  */
 PlaygroundPage.current.liveView = canvas.imageView
+PlaygroundPage.current.needsIndefiniteExecution = true
