@@ -42,7 +42,7 @@ let hue = Int(arc4random_uniform(360))
 
 // Draw the initial square
 canvas.fillColor = Color(hue: hue, saturation: 80, brightness: 90, alpha: 100)
-canvas.drawRectangle(bottomLeftX: 50, bottomLeftY: 50, width: 200, height: 200)
+canvas.drawRectangle(centreX: canvas.width / 2, centreY: canvas.height / 2, width: 200, height: 200)
 
 // Get the complementary colour
 var complement = hue + 180
@@ -55,12 +55,9 @@ if complement > 360 {
 // Get random width and height for the inner square (between 50 and 150)
 let dimension = Int(arc4random_uniform(100)) + 50
 
-// Get the inset for the inner square
-let inset = 50 + (200 - dimension) / 2
-
 // Draw the inner square
 canvas.fillColor = Color(hue: complement, saturation: 80, brightness: 90, alpha: 100)
-canvas.drawRectangle(bottomLeftX: inset, bottomLeftY: inset, width: dimension, height: dimension)
+canvas.drawRectangle(centreX: canvas.width / 2, centreY: canvas.height / 2, width: dimension, height: dimension)
 
 /*:
  ## Template code
