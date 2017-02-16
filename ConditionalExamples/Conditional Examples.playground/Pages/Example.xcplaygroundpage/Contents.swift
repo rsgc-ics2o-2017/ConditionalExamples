@@ -38,7 +38,7 @@ let canvas = Canvas(width: 300, height: 300)
 canvas.drawShapesWithBorders = false
 
 // Get the initial colour
-let hue = Float(arc4random_uniform(360))
+let hue = Int(arc4random_uniform(360))
 
 // Draw the initial square
 canvas.fillColor = Color(hue: hue, saturation: 80, brightness: 90, alpha: 100)
@@ -49,7 +49,7 @@ var complement = hue + 180
 
 // Adjust complementary colour to be between 0 and 360 (if needed)
 if complement > 360 {
-    complement = Float(Int(complement) % 360)
+    complement = complement % 360
 }
 
 // Get random width and height for the inner square (between 50 and 150)
