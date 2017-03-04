@@ -64,4 +64,3 @@ canvas.drawRectangle(centreX: 150, centreY: 150, width: dimension, height: dimen
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
  */
 PlaygroundPage.current.liveView = canvas.imageView
-PlaygroundPage.current.needsIndefiniteExecution = true
